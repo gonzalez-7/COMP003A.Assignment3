@@ -39,6 +39,40 @@ namespace COMP003A.Assignment3
 
             Console.WriteLine("Readiness Category: " + readinessCategory);
             Console.WriteLine();
+
+            // Behavior 2
+
+            Console.Write("Do you have a valid ID? (yes/no): ");
+            string hasIdInput = Console.ReadLine();
+
+            Console.Write("Have you completed orientation? (yes/no): ");
+            string orientationInput = Console.ReadLine();
+
+            bool hasId = (hasIdInput == "yes");
+            bool completedOrientation = (orientationInput == "yes");
+
+            string readinessStatus;
+
+            if (readinessCategory == "Minor")
+            {
+                readinessStatus = "Not Ready";
+            }
+            else if (!hasId)
+            {
+                readinessStatus = "Not Ready";
+            }
+            else if (hasId && !completedOrientation)
+            {
+                readinessStatus = "Conditionally Ready";
+            }
+            else
+            {
+                readinessStatus = "Ready";
+            }
+
+            Console.WriteLine();
+            Console.WriteLine("Readiness Status: " + readinessStatus);
+            Console.WriteLine();
         }
     }
 }
