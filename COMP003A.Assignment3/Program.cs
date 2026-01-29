@@ -73,6 +73,36 @@ namespace COMP003A.Assignment3
             Console.WriteLine();
             Console.WriteLine("Readiness Status: " + readinessStatus);
             Console.WriteLine();
+
+            // Behavior 3
+
+            Console.WriteLine("Select a guidance option: ");
+            Console.WriteLine("1 - Academic Planning");
+            Console.WriteLine("2 - Personal Planning");
+            Console.WriteLine("3 - Career Planning");
+            Console.WriteLine("Enter choice: ");
+
+            string choiceInput = Console.ReadLine();
+            int choice = int.Parse(choiceInput);
+
+            Console.WriteLine();
+            Console.WriteLine("Guidance: ");
+
+            switch (choice)
+            {
+                case 1:
+                    Console.WriteLine("Meet with an academic advisor to plan your next term.");
+                    break;
+                case 2:
+                    Console.WriteLine("Set a schedule and make small weekly goals to sray on track");
+                    break;
+                case 3:
+                    Console.WriteLine("Explore careers, build a resume, and look for interships or entry-level jobs");
+                    break; 
+                default:
+                    Console.WriteLine("Invalid selection. Please chose 1, 2, or 3 next time.");
+                    break;
+            }
         }
     }
 }
